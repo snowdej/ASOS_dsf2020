@@ -18,6 +18,25 @@ Have a look at the models.config to see how this could work
 
 The tf/server refreshes the config file every 15seconds (this can be changed in the docker-compose to be less frequent etc)
 
+To use this you will at least need docker desktop and probably wsl2 containers for it
+
+You can use vscode to clone the repo locally and right click the docker-compose file and choose UP
+
+Visit http://localhost:8888
+
+go to the notebook folder and open the DOCKER version of the notebook
+
+password is hard coded to dsf2020 - see docker file for how this is done
+
+The server runs on port 8501 - but you don't need to worry about that - you can get to the results from the notebook.
+
+To get a different model and serve it - change the path parameter text model_path = "models/recommender/2"  to 3/4/5 etc as you play with the epochs/learning rates etc in the model 
+
+You can just run every cell in the notebook and it will spit out a model that is on the same path as that being used by the server.
+
+The server checks for new models every 15 seconds
+
+The last few cells on the notebook show how to access the latest version, a named version or a version number
 
 
 
