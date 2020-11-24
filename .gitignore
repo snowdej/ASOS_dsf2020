@@ -1,0 +1,12 @@
+/notebooks/.*
+# only include the base recommender v1
+/notebooks/models/recommender/*
+!/notebooks/models/recommender/1
+
+#don't include the datafiles - they can come from the base repo
+/notebooks/*.csv
+/notebooks/*.parquet
+*.zip
+/.ipynb*
+/dummy
+/notebooks/dummy

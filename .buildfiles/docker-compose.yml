@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+    tensorflow:
+        build: 
+          context: . 
+          dockerfile: dockerfile
+        volumes:
+          - ../notebooks:/tf/notebooks
+        ports:
+            - '8891:8888'
+        image: dsf2020:latest
+    serving:
+        ports:
+            - '8501:8501'
+        volumes:
+            - ../notebooks/models:/models 
+        #  See config file to capture recommenders    
+        #  if you dont want a config file use the env variable below
+        # environment:
+        #     - MODEL_NAME=recommender
+        image: tensorflow/serving
+        command:
+            - '--model_config_file=/models/models.config'
+            - '--model_config_file_poll_wait_seconds=15'
+            - '--allow_version_labels_for_unavailable_models=true'
