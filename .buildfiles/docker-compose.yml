@@ -7,7 +7,7 @@ services:
         volumes:
           - ../notebooks:/tf/notebooks
         ports:
-            - '8891:8888'
+            - '8888:8888'
         image: dsf2020:latest
     serving:
         ports:
