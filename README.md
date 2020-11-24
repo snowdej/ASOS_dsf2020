@@ -38,7 +38,7 @@ The server checks for new models every 15 seconds
 
 look at notebooks\models\models.config to see how versions work
 
-look at buildfiles\docker-compose.yml to see how the model file is used in docker startup 
+look at .buildfiles\docker-compose.yml to see how the model file is used in docker startup 
 
 The last few cells on the notebook show how to access the latest version, a named version or a version number
 
