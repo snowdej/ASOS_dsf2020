@@ -3,7 +3,7 @@ FROM tensorflow/tensorflow:latest-gpu-jupyter
 # add notebook folder to path
 ENV PATH "$PATH:/tf/notebooks"
 
-# set a password  setting token in config  password dsf2020!
+# set a password  setting token in config  password dsf2020
 COPY jupyter_notebook_config.json /root/.jupyter/jupyter_notebook_config.json
 
 # copy the dependencies file to the working directory

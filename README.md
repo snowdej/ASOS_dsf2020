@@ -42,3 +42,10 @@ look at .buildfiles\docker-compose.yml to see how the model file is used in dock
 
 The last few cells on the notebook show how to access the latest version, a named version or a version number
 
+If you want to remove the password and use jupyter tokens remove lines 6 and 7 of the docker file that copies the jupyter_notebook_config.json file in to the image
+
+If you just want to change the password afterwards you can login with the token visible when you view the logs of the running container
+
+I have run this on a non-gpu PC using the GPU tagged tensorflow image and it works okay
+
+I have also run this with the CPU (Non gpu) image and it works ok - so you can if you wish remove the gpu tag from the first line of the dockerfile.  The download will be much smaller.   
